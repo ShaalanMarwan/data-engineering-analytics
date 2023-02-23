@@ -7,7 +7,7 @@ version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'pg-dbt-workshop'
+profile: 'data_engineering_zoomcamp'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -33,7 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  taxi_rides_ny:
+  nyc_taxi_ride:
       # Applies to all files under models/.../
       staging:
           materialized: view
