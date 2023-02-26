@@ -4,12 +4,14 @@ version: 2
 sources:
     - name: staging
       #For bigquery:
-      #database: taxi-rides-ny-339813
+      database: data-engineering-camp-376112
+      schema: ny_taxi
 
+      
       # For postgres:
-      database: ny_taxi
+      #database: ny_taxi
 
-      schema: public
+      #schema: public
 
       # loaded_at_field: record_loaded_at
       tables:

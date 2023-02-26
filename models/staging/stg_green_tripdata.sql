@@ -3,10 +3,10 @@
 select
 -- identifier
     {{dbt_utils.surrogate_key(["'VendorID'", 'lpep_pickup_datetime'])}} as tripid,
-    cast("VendorID" as integer) as vendorid,
-    cast("RatecodeID" as integer) as ratecodeid,
-    cast("PULocationID" as integer) as puocationid,
-    cast("DOLocationID" as integer) as dolocationid,
+    safe_cast("VendorID" as integer) as vendorid,
+    safe_cast("RatecodeID" as integer) as ratecodeid,
+    safe_cast("PULocationID" as integer) as puocationid,
+    safe_cast("DOLocationID" as integer) as dolocationid,
 
     --timestamp
     cast(lpep_pickup_datetime as timestamp) as lpep_pickup_datetime,
