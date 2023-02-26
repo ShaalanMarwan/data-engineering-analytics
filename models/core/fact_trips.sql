@@ -61,6 +61,6 @@ select
     trips_unioned.congestion_surcharge
 from trips_unioned
 inner join dim_zones as pickup_zone
-on trips_unioned.puocationid = pickup_zone."LocationID"
+on trips_unioned.puocationid = pickup_zone."locationid"
 inner join dim_zones as dropoff_zone
-on trips_unioned.dolocationid = dropoff_zone."LocationID"
+on trips_unioned.dolocationid = dropoff_zone."locationid"
